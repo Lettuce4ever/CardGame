@@ -15,7 +15,6 @@ namespace CardGame
         public Deck() 
         { 
         cards = new Card[52];
-            int val = 0;
             for (int i=0; i<52; i++)
             {
                 cards[i] = new Card(((i % 13) + 1), ((i / 13) + 1));
@@ -42,6 +41,13 @@ namespace CardGame
         public void Reset() 
         {
             top= 0;
+        }
+
+        privte void Swap(int i, int j)
+        {
+            Card card = cards[j]
+            card[i]= cards[j];
+            cards[j]= card;
         }
     }
 }
